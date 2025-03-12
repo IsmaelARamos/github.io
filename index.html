@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin-right: 15px;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            background: none;
+            border: none;
+            color: #0077cc;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .language-switcher button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Bem-vindo à Minha Homepage</h1>
+    </header>
+    <div class="container">
+        <div class="language-switcher">
+            <button onclick="changeLanguage('pt')">Português</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+
+        <h2 id="about-title">Sobre Mim</h2>
+        <p id="about-text">Olá! Meu nome é Ismael Araújo Ramos, sou graduado em Engenharia da Computação na Universidade Federal do Ceará - UFC, tenho mestrado em Engenharia Elétrica e Computação também pela Universidade Federal do Ceará - UFC. Atualmente sou estudante do curso de licenciatura em Matemática na Faculdade UNINTA e também do curso de Especialização em Docência e Gestão do Ensino Superior pela faculdade UNINTA. Atuo como Professor dos cursos de Sistemas de Informação e Administração da faculdade UNINTA Tianguá, onde leciono as disciplinas de Programação Orientada a Objetos (focada em Java), Técnicas de Programação II (focada em Python), Estrutura de dados (focada em Java), Inteligência Artificial, Gestão de Sistemas de Informação e Gestão de Projetos. Além disso, atuo com pesquisas na área de visão computacional (atualmente com o projeto de identificação de mastite bovina utilizando CNN). Sou gestor de Pesquisa e Extensão do curso de Sistemas de Informação e membro do Comite de Ética em Pesquisa (CEP) da instituição de ensino superior UNINTA Tianguá. Atuo com programação de aplicativos em Flutter com modelos de IA integrado. Aqui você pode encontrar mais informações sobre meus projetos e interesses.</p>
+        
+        <h2 id="projects-title">Meus Projetos</h2>
+        <p id="projects-text">Confira alguns dos meus projetos no GitHub:</p>
+        <ul>
+            <li><a href="https://github.com/IsmaelARamos/MiniCurso/" target="_blank">Pequeno formulário em DART</a></li>
+            <li><a href="https://github.com/IsmaelARamos/flores2" target="_blank">Reconhecimento de Flores com IA</a></li>
+            <li><a href="https://github.com/IsmaelARamos/aula309" target="_blank">Exemplo simples de sorteio</a></li>
+        </ul>
+
+        <h2 id="contact-title">Contato</h2>
+        <p id="contact-text">Você pode me encontrar nas seguintes redes sociais:</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ismael-ramos-a50694a0/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/IsmaelARamos" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            pt: {
+                headerTitle: "Bem-vindo à Minha Homepage",
+                aboutTitle: "Sobre Mim",
+                aboutText: "Olá! Meu nome é Ismael Araújo Ramos, sou graduado em Engenharia da Computação na Universidade Federal do Ceará - UFC, tenho mestrado em Engenharia Elétrica e Computação também pela Universidade Federal do Ceará - UFC. Atualmente sou estudante do curso de licenciatura em Matemática na Faculdade UNINTA e também do curso de Especialização em Docência e Gestão do Ensino Superior pela faculdade UNINTA. Atuo como Professor dos cursos de Sistemas de Informação e Administração da faculdade UNINTA Tianguá, onde leciono as disciplinas de Programação Orientada a Objetos (focada em Java), Técnicas de Programação II (focada em Python), Estrutura de dados (focada em Java), Inteligência Artificial, Gestão de Sistemas de Informação e Gestão de Projetos. Além disso, atuo com pesquisas na área de visão computacional (atualmente com o projeto de identificação de mastite bovina utilizando CNN). Sou gestor de Pesquisa e Extensão do curso de Sistemas de Informação e membro do Comite de Ética em Pesquisa (CEP) da instituição de ensino superior UNINTA Tianguá. Atuo com programação de aplicativos em Flutter com modelos de IA integrado. Aqui você pode encontrar mais informações sobre meus projetos e interesses.",
+                projectsTitle: "Meus Projetos",
+                projectsText: "Confira alguns dos meus projetos no GitHub:",
+                contactTitle: "Contato",
+                contactText: "Você pode me encontrar nas seguintes redes sociais:"
+            },
+            en: {
+                headerTitle: "Welcome to My Homepage",
+                aboutTitle: "About Me",
+                aboutText: "Hello! My name is Ismael Araújo Ramos. I hold a degree in Computer Engineering from the Federal University of Ceará (UFC), and I have a master's degree in Electrical Engineering and Computing, also from UFC. I am currently a student in the Mathematics degree program at UNINTA and pursuing a Specialization in Teaching and Management of Higher Education at UNINTA. I work as a professor in the Information Systems and Business Administration courses at UNINTA Tianguá, where I teach subjects such as Object-Oriented Programming (focused on Java), Programming Techniques II (focused on Python), Data Structures (focused on Java), Artificial Intelligence, Information Systems Management, and Project Management. Additionally, I am involved in research in the field of computer vision, currently working on a project for identifying bovine mastitis using CNN. I am the Research and Extension Manager for the Information Systems course and a member of the Research Ethics Committee (CEP) at UNINTA Tianguá. I also work with app programming in Flutter with integrated AI models. Here you can find more information about my projects and interests.",
+                projectsTitle: "My Projects",
+                projectsText: "Check out some of my projects on GitHub:",
+                contactTitle: "Contact",
+                contactText: "You can find me on the following social networks:"
+            }
+        };
+
+        function changeLanguage(language) {
+            document.getElementById('header-title').innerText = translations[language].headerTitle;
+            document.getElementById('about-title').innerText = translations[language].aboutTitle;
+            document.getElementById('about-text').innerText = translations[language].aboutText;
+            document.getElementById('projects-title').innerText = translations[language].projectsTitle;
+            document.getElementById('projects-text').innerText = translations[language].projectsText;
+            document.getElementById('contact-title').innerText = translations[language].contactTitle;
+            document.getElementById('contact-text').innerText = translations[language].contactText;
+        }
+    </script>
+</body>
+</html>
